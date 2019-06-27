@@ -14,7 +14,7 @@ public class AddUserStage {
 	private TextField txtUser;
 	private PasswordField txtPass;
 	
-	public AddUserStage(Stage stage) {
+	public AddUserStage(final Stage stage) {
 
 		// creating the classes hierarchy (pane -> scene -> stage)
 		AnchorPane pane = new AnchorPane();
@@ -50,7 +50,7 @@ public class AddUserStage {
 
 		// setting the login button behavior using a lambda expression
 		btnAdd.setOnMouseClicked(e -> {
-			// verificações
+			// verifica�oes
 			DB.users.addUser(txtUser.getText(), txtPass.getText());
 			// alertar
 			stage.close();
