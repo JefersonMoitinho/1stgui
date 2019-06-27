@@ -10,7 +10,6 @@ public class UserXML implements UserDBInterface {
 
 	private static ObservableList<User> users;
 
-	@Override
 	public User getUser(String username) {
 		users = getUsers();
 		for (User user : users)
@@ -19,7 +18,6 @@ public class UserXML implements UserDBInterface {
 		return null;
 	}
 
-	@Override
 	public ObservableList<User> getUsers() {
 		if (users == null) {
 			users = FXCollections.observableArrayList(new ArrayList<User>());
