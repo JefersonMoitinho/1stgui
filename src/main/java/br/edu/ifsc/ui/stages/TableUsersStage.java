@@ -14,9 +14,9 @@ import javafx.scene.layout.AnchorPane;
 import javafx.stage.Stage;
 import jfxtras.styles.jmetro8.JMetro;
 
-public class MainStage {
+public class TableUsersStage {
 
-	public MainStage(Stage stage, String username) {
+	public void start(Stage stage, String username) {
 
 		// creating the classes hierarchy (pane -> scene -> stage)
 		AnchorPane pane = new AnchorPane();
@@ -29,7 +29,7 @@ public class MainStage {
 		lblMain.setLayoutX(10);
 		lblMain.setLayoutY(10);
 		pane.getChildren().add(lblMain);
-		
+
 		Button btnAdd = new Button(Strings.addUser);
 		btnAdd.setLayoutX(400);
 		btnAdd.setLayoutY(10);
