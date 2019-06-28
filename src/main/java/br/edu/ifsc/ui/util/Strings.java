@@ -16,8 +16,8 @@ public class Strings {
 	public static final String btnMenuSair = "Sair";
 	public static final String btnMenuAluno = " Gerenciar Aluno";
 	public static final String btnMenuProfessor = "Gerenciar Treinador";
-	public static final String btnMenuRotinaClasse = "Rotina Classe";
-	public static final String btnMenuBiblioteca = "Biblioteca";
+	public static final String btnMenuRotinaClasse = "Cadastrar Produtos";
+	public static final String btnMenuBiblioteca = "Cadastrar Equipamentos";
 	public static final String btnMenuDefinicoes = "Definições de usuario";
 
 	// String class StudentScream
@@ -69,12 +69,12 @@ public class Strings {
 	public static final String lblArea = "Area de especialização:";
 
 	// main stage strings
-	public static final String lblMain = "OlÃ¡";
+	public static final String lblMain = "Olá, Bem vindo";
 	public static final String btnOk = "Ok";
 	public static final String name = "Nome";
 	public static final String isAdmin = "Admin";
 
-	public static final String addUser = "Novo usuÃ¡rio";
+	public static final String addUser = "Novo usuário";
 
 	public static final String btnAdd = "Adicionar";
 }

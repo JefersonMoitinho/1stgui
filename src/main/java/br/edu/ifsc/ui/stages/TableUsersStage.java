@@ -31,10 +31,22 @@ public class TableUsersStage {
 		pane.getChildren().add(lblMain);
 
 		Button btnAdd = new Button(Strings.addUser);
-		btnAdd.setLayoutX(400);
+		btnAdd.setLayoutX(300);
 		btnAdd.setLayoutY(10);
 		btnAdd.setOnAction(e -> {
 			new AddUserStage(new Stage());
+		});
+		btnAdd.setStyle("-fx-background-color: #007FFF; -fx-text-fill: white;");
+
+		// creating the return button
+		Button btnStudentVoltar = new Button(Strings.btnStudentVoltar);
+		btnStudentVoltar.setLayoutX(480);
+		btnStudentVoltar.setLayoutY(10);
+		btnStudentVoltar.setMaxWidth(150);
+		btnStudentVoltar.setMinWidth(80);
+		btnStudentVoltar.setPrefWidth(150);
+		btnStudentVoltar.setOnMouseClicked(e -> {
+			Menu(stage);
 		});
 
 		pane.getChildren().add(btnAdd);
@@ -65,12 +77,14 @@ public class TableUsersStage {
 		// adding the created cols to the table
 		usersTable.getColumns().add(colName);
 		usersTable.getColumns().add(colPass);
+		
 
 		// adding users data to the table
 		usersTable.setItems(DB.users.getUsers());
 
 		// adding the table to the pane
 		pane.getChildren().add(usersTable);
+		pane.getChildren().add(btnStudentVoltar);
 
 		// applying the LIGHT style from the JMetro library to the pane
 		new JMetro(JMetro.Style.LIGHT).applyTheme(pane);
@@ -81,5 +95,14 @@ public class TableUsersStage {
 
 		// showing the created UI
 		stage.show();
+	}
+	
+	private void Menu(Stage stage) {
+		try {
+			new Main("admin").start(new Stage());
+			stage.close();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 }

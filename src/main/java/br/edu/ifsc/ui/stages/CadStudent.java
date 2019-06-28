@@ -1,8 +1,12 @@
 package br.edu.ifsc.ui.stages;
 
+import java.time.LocalDate;
+
 import com.jfoenix.controls.JFXButton;
 import com.jfoenix.controls.JFXDatePicker;
 
+import br.edu.ifsc.ui.db.StudentDBInterface;
+import br.edu.ifsc.ui.util.DB;
 import br.edu.ifsc.ui.util.Strings;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
@@ -22,7 +26,9 @@ public class CadStudent {
 	private TextField txtEndereco;
 	private TextField txtPeso;
 	private TextField txtAltura;
-
+	String data;
+	
+	
 	public void start(Stage stage) throws Exception {
 		// creating the classes hierarchy (pane -> scene -> stage)
 		AnchorPane pane = new AnchorPane();
@@ -75,17 +81,14 @@ public class CadStudent {
 		lblAltura.setLayoutX(250);
 		lblAltura.setLayoutY(270);
 
-		// creating the return button
+		// creating the Add button
 		Button btnStudentAdd = new JFXButton(Strings.btnStudentAdd);
 		btnStudentAdd.setLayoutX(260);
 		btnStudentAdd.setLayoutY(350);
 		btnStudentAdd.setMaxWidth(80);
 		btnStudentAdd.setMinWidth(15);
 		btnStudentAdd.setPrefWidth(150);
-		btnStudentAdd.setOnMouseClicked(e -> {
-			showAdd();
-			return;
-		});
+	
 		btnStudentAdd.setStyle("-fx-background-color: #007FFF; -fx-text-fill: white;");
 
 		// creating the return button
@@ -201,6 +204,19 @@ public class CadStudent {
 
 		// showing the created UI
 		stage.show();
+		
+		
+		
+		txtNascStudent.setOnAction(e->{
+			LocalDate date = txtNascStudent.getValue();
+			data = String.valueOf(date);
+		});
+		
+		
+		btnStudentAdd.setOnMouseClicked(e -> {
+	           DB.students.addStudent(txtnomeStudent.getText(), txtRgStudent.getText(), txtCpfStudent.getText(), data, Double.parseDouble(txtPeso.getText()), Double.parseDouble(txtAltura.getText()), txtEndereco.getText()); 
+	;
+		});
 	}
 
 	private void Cancel(Stage stage) {

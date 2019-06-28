@@ -32,8 +32,8 @@ public class StudentScream {
 
 		// creating the return button
 		Button btnStudentVoltar = new Button(Strings.btnStudentVoltar);
-		btnStudentVoltar.setLayoutX(360);
-		btnStudentVoltar.setLayoutY(30);
+		btnStudentVoltar.setLayoutX(450);
+		btnStudentVoltar.setLayoutY(10);
 		btnStudentVoltar.setMaxWidth(80);
 		btnStudentVoltar.setMinWidth(15);
 		btnStudentVoltar.setPrefWidth(150);
@@ -43,8 +43,8 @@ public class StudentScream {
 
 		// creating the cad button
 		Button btnStudentCad = new JFXButton(Strings.btnStudentCad);
-		btnStudentCad.setLayoutX(260);
-		btnStudentCad.setLayoutY(240);
+		btnStudentCad.setLayoutX(330);
+		btnStudentCad.setLayoutY(490);
 		btnStudentCad.setMaxWidth(80);
 		btnStudentCad.setMinWidth(15);
 		btnStudentCad.setPrefWidth(150);
@@ -56,8 +56,8 @@ public class StudentScream {
 
 		// creating the return button
 		JFXButton btnStudentDel = new JFXButton(Strings.btnStudentDel);
-		btnStudentDel.setLayoutX(360);
-		btnStudentDel.setLayoutY(240);
+		btnStudentDel.setLayoutX(430);
+		btnStudentDel.setLayoutY(490);
 		btnStudentDel.setMaxWidth(80);
 		btnStudentDel.setMinWidth(15);
 		btnStudentDel.setPrefWidth(150);
